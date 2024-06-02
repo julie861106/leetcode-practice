@@ -9,8 +9,8 @@ module.exports = {
     types: { // Commit 類型的清單
         feat: {
           description: 'A new feature',
-          emoji: '✨',
-          value: 'feat'
+          emoji: '✨', // Commit 類型的 emoji
+          value: 'feat' // Commit 類型的值
         },
         fix: {
             description: 'A bug fix',
@@ -19,7 +19,7 @@ module.exports = {
         },
         refactor: {
             description: 'A code change that neither fixes a bug or adds a feature',
-            emoji: '🛠',
+            emoji: '🛠 ',
             value: 'refactor'
         },
         style: {
@@ -39,8 +39,8 @@ module.exports = {
         },
         chore: {
             description: 'Build process or auxiliary tool changes', // Commit 類型的描述
-            emoji: '🗯', // Commit 類型的 emoji
-            value: 'chore' // Commit 類型的值
+            emoji: '🗯 ',
+            value: 'chore'
         },
         perf: {
             description: 'A code change that improves performance',
