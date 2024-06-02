@@ -3,3 +3,11 @@ black==20.8b1       # check codestyle
 pycodestyle==2.7.0  # check codestyle
 flake8==3.9.1       # check codestyle
 pylint==2.6.0       # check codestyle
+
+pytest==6.1.2       # pytest
+pytest-mock==3.3.1  # pytest
+pytest-html==3.2.0  # pytest
+pytest-metadata==2.0.4  # to avoid the issue https://github.com/pytest-dev/pytest-html/issues/683
+pyzipper==0.3.3     # pytest
+Markdown==3.3.3     # pytest
+pytest-rerunfailures==10.2  # pytest - pytest plugin to re-run tests to eliminate flaky failures. https://pypi.org/project/pytest-rerunfailures/
