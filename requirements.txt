@@ -1,0 +1,5 @@
+autopep8==1.5.6     # check codestyle
+black==20.8b1       # check codestyle
+pycodestyle==2.7.0  # check codestyle
+flake8==3.9.1       # check codestyle
+pylint==2.6.0       # check codestyle
