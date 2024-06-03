@@ -1,6 +1,6 @@
 module.exports = {
     disableEmoji: false, // 是否禁用 emoji
-    format: '{emoji}{type}{scope}: {subject}', // Commit 訊息的格式
+    format: '{type}{scope}: {emoji}{subject}', // Commit 訊息的格式
     list: ['test', 'feat', 'fix', 'chore', 'docs', 'refactor', 'style', 'ci', 'perf'], // Commit 類型的清單
     maxMessageLength: 64, // Commit 訊息的最大長度
     minMessageLength: 3, // Commit 訊息的最小長度
