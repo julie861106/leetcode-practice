@@ -20,8 +20,8 @@ test = Solution()
 test_set = [["h","e","l","l","o"], ["H","a","n","n","a","h"]]
 test_ans = [["o","l","l","e","h"], ["h","a","n","n","a","H"]]
 
-for num, test_string in enumerate(test_set):
-    if test_ans[num] != test.reverseString(test_string):
-        print(f"FAILED: Answer is {test_ans[num]} NOT {test.reverseString(test_string)}")
+for num, test_case in enumerate(test_set):
+    if test_ans[num] != test.reverseString(test_case):
+        print(f"FAILED: Answer is {test_ans[num]} NOT {test.reverseString(test_case)}")
     else:
         print("PASSED")

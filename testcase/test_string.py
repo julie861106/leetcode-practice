@@ -13,8 +13,8 @@ class TestString:
         test_ans = [["o","l","l","e","h"], ["h","a","n","n","a","H"]]
 
         test = reverse_string.Solution()
-        for num, test_string in enumerate(test_set):
-            assert test_ans[num] == test.reverseString(test_string)
+        for num, test_case in enumerate(test_set):
+            assert test_ans[num] == test.reverseString(test_case)
 
     @pytest.mark.string
     @pytest.mark.test_key("2486")
