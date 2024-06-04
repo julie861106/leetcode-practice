@@ -24,9 +24,9 @@ test = Solution()
 test_set = ["abccccdd", "a", "ccc", "cccbbb"]
 test_ans = [7, 1, 3, 5]
 
-for num, test_string in enumerate(test_set):
-    if test_ans[num] != test.longestPalindrome(test_string):
-        print(f"FAILED: Answer is {test_ans[num]} NOT {test.longestPalindrome(test_string)}")
+for num, test_case in enumerate(test_set):
+    if test_ans[num] != test.longestPalindrome(test_case):
+        print(f"FAILED: Answer is {test_ans[num]} NOT {test.longestPalindrome(test_case)}")
     else:
         print("PASSED")
 # "ccc" -> 3
