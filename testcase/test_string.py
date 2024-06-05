@@ -1,5 +1,5 @@
 import pytest
-from problem import reverse_string, append_characters, longest_palindrome
+from problem import reverse_string, append_characters, longest_palindrome, common_chars
 
 
 class TestString:
@@ -44,3 +44,25 @@ class TestString:
 
         for num, test_case in enumerate(test_set):
             assert test_ans[num] == test.longestPalindrome(test_case)
+
+    @pytest.mark.string
+    @pytest.mark.test_key("1002")
+    # find-common-characters
+    def test_commonChars(self):
+        test_set = [
+            ["bella","label","roller"],
+            ["cool","lock","cook"],
+            ["a","a","a"],
+            ["ba","ab","abb"]
+        ]
+        test_ans = [
+            ["e","l","l"],
+            ["c","o"],
+            ["a"],
+            ["a","b"]
+        ]
+
+        test = common_chars.Solution()
+
+        for num, test_case in enumerate(test_set):
+            assert test_ans[num] == test.commonChars(test_case)
