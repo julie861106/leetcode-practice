@@ -1,8 +1,14 @@
 import pytest
-from problem import reverse_string, append_characters, longest_palindrome, common_chars, is_n_straight_hand
+from problem import reverse_string, append_characters, longest_palindrome, common_chars, is_n_straight_hand, replace_words
 
+
+# def run_tests(test_cases, solution_method):
+#     for test_case, expected in test_cases:
+#         assert solution_method(*test_case) == expected
 
 class TestString:
+
+    # def run_testcase(test_set, test_ans, input_amount):
 
 
     @pytest.mark.string
@@ -90,3 +96,37 @@ class TestString:
 
         for num, test_case in enumerate(test_set):
             assert test_ans[num] == test.isNStraightHand(test_case[0], test_case[1])
+
+
+    @pytest.mark.string
+    @pytest.mark.test_key("648")
+    # replace-words
+    def test_replaceWords(self):
+        test_set = [
+            [["cat","bat","rat"], "the cattle was rattled by the battery"],
+            [["a","b","c"], "aadsfasf absbs bbab cadsfafs"],
+            [["a", "aa", "aaa", "aaaa"], "a a a a a a a a b b a"],
+            [["a", "aa", "aaa", "aaaa"], "a aa a aaaa aaa aaa aaa aaaaaa bbb baba ababa"],
+            [["catt","cat","bat","rat"], "the cattle was rattled by the battery"],
+            [["e","k","c","harqp","h","gsafc","vn","lqp","soy","mr","x","iitgm","sb","oo",
+              "spj","gwmly","iu","z","f","ha","vds","v","vpx","fir","t","xo","apifm","tlznm",
+              "kkv","nxyud","j","qp","omn","zoxp","mutu","i","nxth","dwuer","sadl","pv","w",
+              "mding","mubem","xsmwc","vl","farov","twfmq","ljhmr","q","bbzs","kd","kwc","a",
+              "buq","sm","yi","nypa","xwz","si","amqx","iy","eb","qvgt","twy","rf","dc","utt",
+              "mxjfu","hm","trz","lzh","lref","qbx","fmemr","gil","go","qggh","uud","trnhf",
+              "gels","dfdq","qzkx","qxw"],
+              "ikkbp miszkays wqjferqoxjwvbieyk gvcfldkiavww vhokchxz dvypwyb bxahfzcfanteibiltins ueebf lqhflvwxksi dco kddxmckhvqifbuzkhstp wc ytzzlm gximjuhzfdjuamhsu gdkbmhpnvy ifvifheoxqlbosfww mengfdydekwttkhbzenk wjhmmyltmeufqvcpcxg hthcuovils ldipovluo aiprogn nusquzpmnogtjkklfhta klxvvlvyh nxzgnrveghc mpppfhzjkbucv cqcft uwmahhqradjtf iaaasabqqzmbcig zcpvpyypsmodtoiif qjuiqtfhzcpnmtk yzfragcextvx ivnvgkaqs iplazv jurtsyh gzixfeugj rnukjgtjpim hscyhgoru aledyrmzwhsz xbahcwfwm hzd ygelddphxnbh rvjxtlqfnlmwdoezh zawfkko iwhkcddxgpqtdrjrcv bbfj mhs nenrqfkbf spfpazr wrkjiwyf cw dtd cqibzmuuhukwylrnld dtaxhddidfwqs bgnnoxgyynol hg dijhrrpnwjlju muzzrrsypzgwvblf zbugltrnyzbg hktdviastoireyiqf qvufxgcixvhrjqtna ipfzhuvgo daee r nlipyfszvxlwqw yoq dewpgtcrzausqwhh qzsaobsghgm ichlpsjlsrwzhbyfhm ksenb bqprarpgnyemzwifqzz oai pnqottd nygesjtlpala qmxixtooxtbrzyorn gyvukjpc s mxhlkdaycskj uvwmerplaibeknltuvd ocnn frotscysdyclrc ckcttaceuuxzcghw pxbd oklwhcppuziixpvihihp"]
+        ]
+        test_ans = [
+            "the cat was rat by the bat",
+            "a a b c",
+            "a a a a a a a a b b a",
+            "a a a a a a a a bbb baba a",
+            "the cat was rat by the bat",
+            "i miszkays w gvcfldkiavww v dvypwyb bxahfzcfanteibiltins ueebf lqhflvwxksi dc k w ytzzlm gximjuhzfdjuamhsu gdkbmhpnvy i mengfdydekwttkhbzenk w h ldipovluo a nusquzpmnogtjkklfhta k nxzgnrveghc mpppfhzjkbucv c uwmahhqradjtf i z q yzfragcextvx i i j gzixfeugj rnukjgtjpim h a x h ygelddphxnbh rvjxtlqfnlmwdoezh z i bbfj mhs nenrqfkbf spfpazr w c dtd c dtaxhddidfwqs bgnnoxgyynol h dijhrrpnwjlju muzzrrsypzgwvblf z h q i daee r nlipyfszvxlwqw yoq dewpgtcrzausqwhh q i k bqprarpgnyemzwifqzz oai pnqottd nygesjtlpala q gyvukjpc s mxhlkdaycskj uvwmerplaibeknltuvd ocnn f c pxbd oklwhcppuziixpvihihp"
+        ]
+
+        test = replace_words.Solution()
+
+        for num, test_case in enumerate(test_set):
+            assert test_ans[num] == test.replaceWords(test_case[0], test_case[1])
