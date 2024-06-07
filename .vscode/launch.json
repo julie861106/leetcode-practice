@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python 偵錯工具: 目前檔案",
+            "name": "Python Module",
             "type": "debugpy",
             "request": "launch",
-            "program": "${file}",
+            "program": "pytest",
             "console": "integratedTerminal"
         }
     ]
