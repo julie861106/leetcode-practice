@@ -1,8 +1,14 @@
 import pytest
-from problem import reverse_string, append_characters, longest_palindrome, common_chars, is_n_straight_hand
+from problem import reverse_string, append_characters, longest_palindrome, common_chars, is_n_straight_hand, replace_words
 
+
+# def run_tests(test_cases, solution_method):
+#     for test_case, expected in test_cases:
+#         assert solution_method(*test_case) == expected
 
 class TestString:
+
+    # def run_testcase(test_set, test_ans, input_amount):
 
 
     @pytest.mark.string
@@ -90,3 +96,22 @@ class TestString:
 
         for num, test_case in enumerate(test_set):
             assert test_ans[num] == test.isNStraightHand(test_case[0], test_case[1])
+
+
+    @pytest.mark.string
+    @pytest.mark.test_key("648")
+    # replace-words
+    def test_replaceWords(self):
+        test_set = [
+            [["cat","bat","rat"], "the cattle was rattled by the battery"],
+            [["a","b","c"], "aadsfasf absbs bbab cadsfafs"]
+        ]
+        test_ans = [
+            "the cat was rat by the bat",
+            "a a b c",
+        ]
+
+        test = replace_words.Solution()
+
+        for num, test_case in enumerate(test_set):
+            assert test_ans[num] == test.replaceWords(test_case[0], test_case[1])
